@@ -1,5 +1,5 @@
 {
-  "name": "my-next-app",
+  "name": "url-shortener",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "axios": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.10.3",
+    "next": "12.3.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sequelize": "^6.37.3"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.5"
+    "eslint-config-next": "12.3.4",
+    "typescript": "^5.5.4"
   }
 }
