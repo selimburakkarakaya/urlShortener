@@ -41,8 +41,8 @@ const UrlList: React.FC<UrlListProps> = ({ urls, setUrls }) => {
           <Link href={url.originalUrl.startsWith('http') ? url.originalUrl : `https://${url.originalUrl}`} passHref>
             <a target='_blank' rel='noopener noreferrer'>{url.shortUrl}</a>
           </Link>
-          <button style={{ width: '7%' }} onClick={() => setEditId(url.id)}>Düzelt</button>
-          <button style={{ width: '4%' }} onClick={() => handleDelete(url.id)}>Sil</button>
+          <button onClick={() => setEditId(url.id)}>Düzelt</button>
+          <button onClick={() => handleDelete(url.id)}>Sil</button>
         </div>
       ))}
     </div>

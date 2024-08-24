@@ -36,6 +36,7 @@ const UrlForm: React.FC<UrlFormProps> = ({ setUrls }) => {
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0' }}>
       <input
+        style={{width: '65%'}}
         type="text"
         value={originalUrl}
         onChange={(e) => setOriginalUrl(e.target.value)}

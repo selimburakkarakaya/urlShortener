@@ -6,7 +6,7 @@ const Url = db.Url;
 
 export const createUrl = async (originalUrl: string) => {
   try {
-    const shortUrl = generateShortUrl();
+    const shortUrl = await generateShortUrl(6, Url);
     const description = await fetchTitleFromUrl(originalUrl);
 
     const newUrl = await Url.create({ originalUrl, shortUrl, description });
@@ -34,7 +34,7 @@ export const updateUrl = async (id: string, originalUrl: string) => {
     throw new Error('URL not found!');
   }
 
-  const shortUrl = generateShortUrl();
+  const shortUrl = await generateShortUrl(6, Url);
   const description = await fetchTitleFromUrl(originalUrl);
 
   url.originalUrl = originalUrl;
